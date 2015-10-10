@@ -1,0 +1,31 @@
+{
+  "name": "ktsnd-test-ja",
+  "version": "1.0.0",
+  "description": "KTSND (Kano Test for Social Nicotine Dependence) in Japanese",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CureApp/ktsnd-test-ja.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CureApp/ktsnd-test-ja/issues"
+  },
+  "homepage": "https://github.com/CureApp/ktsnd-test-ja",
+  "keywords": [
+    "Japanese",
+    "KTSND",
+    "tobacco",
+    "medical",
+    "nicotine dependence",
+    "smoking"
+  ],
+  "author": "CureApp, Inc.",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
