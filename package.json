@@ -1,6 +1,6 @@
 {
   "name": "ktsnd-test-ja",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "KTSND (Kano Test for Social Nicotine Dependence) in Japanese",
   "main": "index.js",
   "scripts": {
