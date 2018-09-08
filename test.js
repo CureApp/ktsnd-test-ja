@@ -24,6 +24,13 @@ console.assert(KTSND.getChoices(3)[1] === 'ややそう思う');
 console.assert(KTSND.getChoices(4)[2] === 'あまりそう思わない');
 console.assert(KTSND.getChoices(5)[3] === 'そう思わない');
 
+// getScore
+console.assert(KTSND.getScore(0,1) === 1);
+console.assert(KTSND.getScore(1,0) === 3);
+console.assert(KTSND.getScore(2,1) === 2);
+console.assert(KTSND.getScore(3,2) === 1);
+console.assert(KTSND.getScore(4,3) === 0);
+console.assert(KTSND.getScore(5,1) === 2);
 
 // calculate
 console.assert(KTSND.calculate([0,0,0,0,0,0,0,0,0,0]) === 27);
