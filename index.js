@@ -1,4 +1,4 @@
-module.exports = {
+var KTSND = {
 
     /**
     質問一覧を返す
@@ -37,6 +37,22 @@ module.exports = {
     },
 
     /**
+    qsIndexに相当する質問に対してanswerIndexと答えたときに、どういう点数になるのか。
+    @method getScore
+    @param {Array(Number)} answerIndex 選んだ選択肢のインデックスの配列(質問順)
+    @return {Number} 点数
+    */
+    getScore: function(qsIndex, answerIndex) {
+        if (qsIndex === 0) {
+            return answerIndex;
+        }
+        else {
+            return 3 - answerIndex;
+        }
+    },
+
+
+    /**
     indexで与えられた選択肢の配列から、点数を計算する
 
     @method calculate
@@ -50,16 +66,9 @@ module.exports = {
         }
         // Q1 のみ、qsIndexの通りの点数, Q2~Q10は 3 - qsIndex
 
-        return answerIndexes.reduce(function(total, qsIndex, i) {
+        return answerIndexes.reduce(function(total, answerIndex, qsIndex) {
 
-            var point;
-
-            if (i === 0) {
-                point = qsIndex;
-            }
-            else {
-                point = 3 - qsIndex;
-            }
+            var point = KTSND.getScore(qsIndex, answerIndex);
 
             return total + point;
 
@@ -67,3 +76,4 @@ module.exports = {
     }
 };
 
+module.exports = KTSND
